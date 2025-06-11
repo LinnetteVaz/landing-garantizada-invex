@@ -1,11 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>landing invex</title>
+    <style>
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .slide div {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        #s1:checked~.carrusel .slides {
+            transform: translateX(0%);
+        }
+
+        #s2:checked~.carrusel .slides {
+            transform: translateX(-100%);
+        }
+
+        #s3:checked~.carrusel .slides {
+            transform: translateX(-200%);
+        }
+
+        #s4:checked~.carrusel .slides {
+            transform: translateX(-300%);
+        }
+
+        .flechas {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .flechas label {
+            cursor: pointer;
+            font-size: 25px;
+            padding: 10px;
+            user-select: none;
+        }
+
+        .ocultar {
+            display: none;
+        }
+
+        #s1:checked~.flechas #f1,
+        #s2:checked~.flechas #f2,
+        #s3:checked~.flechas #f3,
+        #s4:checked~.flechas #f4 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
 </head>
-<body>
-    
+
+<body style="font-family: 'Inter', sans-serif; margin: 0;">
+    <section id="secction-1-banner" style="display: flex; width: 100%;">
+        <img style="object-fit: cover; height: 455px; width: 100%;"
+            src="https://img.freepik.com/foto-gratis/cerca-joven-atractiva-carismatica-aislada_273609-35354.jpg?t=st=1749663623~exp=1749667223~hmac=20cab03e848b61c87c8ec75dc0ec20e005b67a7ef6a6d15dd8470ef4c2f0fcbd&w=996"
+            alt="" srcset="" />
+    </section>
+    <main style="width: 100%;">
+        <section id="secction-2-description"
+            style="text-align: center; max-width: 1400px; width: 100%;  margin: 0 auto;">
+            <div id="subtitle" style="margin: 60px auto; width: 70%;">
+                <h2 style="font-weight: 200; font-size: 37px;">
+                    Te acompañamos a construir o mejorar tu historial crediticio, sin
+                    complicaciones.
+                </h2>
+            </div>
+            <div id="description" style="width: 100%;">
+                <h3 style="font-weight: 700; font-size: 33px;">
+                    ¿Quieres saber cuál es la diferencia entre una
+                    <span style="color: #B20030;">Tarjeta de Crédito con Garantía</span> y una
+                    <span style="color: #B20030;">Tarjeta de Crédito Tradicional</span> ?
+                </h3>
+                <p style="font-size: 25px; font-weight: 300;">La Tarjeta de Crédito INVEX con garantía,  funciona como
+                    una Tarjeta
+                    de Crédito Tradicional, es aceptada en  cualquier establecimiento,
+                    podrás hacer compras en línea  y además conserva los mismos
+                    beneficios.
+                </p>
+                <p style="font-size: 25px; font-weight: 300; ">
+                    La única diferencia es que para poder adquirirla tendrás que
+                    respaldarla con un depósito que corresponde a un porcentaje de la
+                    línea de Crédito que elijas.
+                </p>
+                <button
+                    style=" margin:50px auto; width: 454px;height: 63px ; color: #ffffff; background-color: #B20030; box-shadow: 0 4px 4px hwb(0deg 0% 100% / 25%); border-radius: 20px; border: none; cursor: pointer; font-size: 20px; font-weight: 700;">¡SOLICÍTALA
+                    HOY!</button>
+            </div>
+        </section>
+
+        <section id="secction-3-product" style="text-align: center;   max-width: 1400px; width: 100%;  margin: 0 auto;">
+            <h3 style="font-size: 45px; font-weight: 600;"> ¿Para quién es este producto?</h3>
+            <div id="container-images" style="display: flex; flex-direction: column; gap: 200px;">
+                <img style="object-fit: cover; height: 540px; width: 100%;"
+                    src="https://img.freepik.com/foto-gratis/cerca-joven-atractiva-carismatica-aislada_273609-35354.jpg?t=st=1749663623~exp=1749667223~hmac=20cab03e848b61c87c8ec75dc0ec20e005b67a7ef6a6d15dd8470ef4c2f0fcbd&w=996"
+                    alt="" />
+                <img style="object-fit: cover; height: 540px; width: 100%;"
+                    src="https://img.freepik.com/foto-gratis/cerca-joven-atractiva-carismatica-aislada_273609-35354.jpg?t=st=1749663623~exp=1749667223~hmac=20cab03e848b61c87c8ec75dc0ec20e005b67a7ef6a6d15dd8470ef4c2f0fcbd&w=996"
+                    alt="" />
+            </div>
+        </section>
+    </main>
+    <main style="width: 100%; background-image: url(/public/Vector.png);">
+        <section id="secction-3-garantía"
+            style="text-align: center;  margin: 70px auto;max-width: 1400px; width: 100%;">
+            <h3 style="font-weight: 700; font-size: 33px; color: #B20030;"> ¿Y qué pasa con tu Garantía? </h3>
+            <p style="font-weight: 300; font-size: 30px;">Tu Garantía siempre estará segura y podrás verla en todo
+                momento dentro de tu app INVEX Control.</p>
+            <p style="font-weight: 300; font-size: 30px;">Usa tu <span
+                    style=" font-weight: 700; color: #B20030;">Tarjeta de Crédito</span> de manera responsable, realiza
+                compras  y paga el saldo a tiempo de manera
+                mensual. Al cumplir con estos dos requisitos dentro de un periodo de 6 a 9 meses podrás graduarte  y
+                de
+                esta manera, te devolveremos tu garantía, además de conservar tu <span
+                    style="font-weight: 700; color: #B20030;">Tarjeta de Crédito</span> y seguir
+                disfrutando
+                de todos sus beneficios.
+            </p>
+        </section>
+        <section id="secction-4-carrusel" style="text-align: center;  margin: 70px auto; width:100%;  ;">
+            <div
+                style=" margin:0; background-color:#B20030; height: 30px;box-shadow:0 4px 4px hwb(0deg 0% 100% / 25%) ">
+            </div>
+            <div style=" margin:0; background-color:  #D9D9D9; padding: 75px 0;">
+                <h2 style="margin: 0; font-size: 45px; font-weight: 500; padding: 40px 0 50px 0;">¿Cómo pido mi <span
+                        style="font-weight: 500; color: #B20030;">Tarjeta</span>? 
+                </h2>
+                    
+                <input type="radio" name="slider" id="s1" checked>
+                <input type="radio" name="slider" id="s2">
+                <input type="radio" name="slider" id="s3">
+                <input type="radio" name="slider" id="s4">
+
+                
+                <div class="carrusel" style="position: relative; width: 600px; height: 300px;overflow: hidden; margin: auto;">
+                    <div class="slides" style=" display: flex; width: 400%;transition: transform 0.5s ease;">
+                        <div class="slide">
+                            <div id="card-1"
+                                style="width: 515px; height: 282px; background-color: #ffffff; box-shadow:0 4px 4px hwb(0deg 0% 100% / 25%); border: none; border-radius: 24px;display: flex; align-items: center; margin: 10px;">
+                                <p style="font-size: 33px;font-weight: 400;">Selecciona la <span
+                                        style="font-weight: 500; color: #B20030;">Tarjeta de Crédito INVEX</span> que
+                                    desees y
+                                    llena tu solicitud en menos de <span style="font-weight: 500; color: #B20030;">5
+                                        minutos.</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div id="card-1"
+                                style="width: 515px; height: 282px; background-color: #ffffff; box-shadow:0 4px 4px hwb(0deg 0% 100% / 25%); border: none; border-radius: 24px;display: flex; align-items: center; margin: 10px; ">
+                                <p style="font-size: 33px;font-weight: 400; ">Selecciona la <span
+                                        style="font-weight: 500; color: #B20030;">Tarjeta de Crédito INVEX</span> que
+                                    desees y
+                                    llena tu solicitud en menos de <span style="font-weight: 500; color: #B20030;">5
+                                        minutos.</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div id="card-1"
+                                style="width: 515px; height: 282px; background-color: #ffffff; box-shadow:0 4px 4px hwb(0deg 0% 100% / 25%); border: none; border-radius: 24px;display: flex; align-items: center; margin: 10px;">
+                                <p style="font-size: 33px;font-weight: 400;">Selecciona la <span
+                                        style="font-weight: 500; color: #B20030;">Tarjeta de Crédito INVEX</span> que
+                                    desees y
+                                    llena tu solicitud en menos de <span style="font-weight: 500; color: #B20030;">5
+                                        minutos.</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div id="card-1"
+                                style="width: 515px; height: 282px; background-color: #ffffff; box-shadow:0 4px 4px hwb(0deg 0% 100% / 25%); border: none; border-radius: 24px;display: flex; align-items: center; margin: 10px;">
+                                <p style="font-size: 33px;font-weight: 400;">Selecciona la <span
+                                        style="font-weight: 500; color: #B20030;">Tarjeta de Crédito INVEX</span> que
+                                    desees y
+                                    llena tu solicitud en menos de <span style="font-weight: 500; color: #B20030;">5
+                                        minutos.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="flechas">
+                   
+                    <div class="ocultar" id="f1">
+                        <label for="s3"><img src="./public/arrow_left.png"></label>
+                        <label for="s2"><img src="./public/arrow_rigth.png"></label>
+                    </div>
+
+                    <div class="ocultar" id="f2">
+                        <label for="s1"><img src="./public/arrow_left.png"></label>
+                        <label for="s3"><img src="./public/arrow_rigth.png"></label>
+                    </div>
+
+                    <div class="ocultar" id="f3">
+                        <label for="s2"><img src="./public/arrow_left.png"></label>
+                        <label for="s4"><img src="./public/arrow_rigth.png"></label>
+                    </div>
+                 
+                    <div class="ocultar" id="f4">
+                        <label for="s3"><img src="./public/arrow_left.png"></label>
+                        <label for="s1"><img src="./public/arrow_rigth.png"></label>
+                    </div>
+                </div>
+            </div>
+            <div
+                style=" margin:0; background-color:#B20030; height: 30px;box-shadow:0 4px 4px hwb(0deg 0% 100% / 25%) ">
+            </div>
+
+            </div>
+
+        </section>
+        <section id="secction-5-video" style="display: flex; gap: 20px; align-items: center; justify-content: center;">
+
+            <video width="40%" height="100%" controls>
+                <source src="https://www.youtube.com/watch?v=hAGw6bRPvMA" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+
+            <div style="width: 50%;text-align: center;">
+                <h3 style="font-size: 40px; font-weight: 400; margin: 20px 0 0 0;">Aprobamos tu Tarjeta hoy mismo</h3>
+                <button
+                    style=" margin:50px auto; width: 454px;height: 63px ; color: #ffffff; background-color: #B20030; box-shadow: 0 4px 4px hwb(0deg 0% 100% / 25%); border-radius: 20px; border: none; cursor: pointer; font-size: 20px; font-weight: 700;">¡SOLICÍTALA!</button>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
