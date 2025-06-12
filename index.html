@@ -31,7 +31,8 @@
             max-width: 1400px;
             width: 100%;
             margin: 0 auto;
-             @media (max-width: 900px) {
+
+            @media (max-width: 900px) {
                 width: 96%;
             }
         }
@@ -329,21 +330,35 @@
         }
 
         .secction-5 {
+            width: 98%;
+            margin: 0 auto;
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             gap: 20px;
             align-items: center;
             justify-content: center;
-            padding: 50px 20px;
-             @media (max-width: 900px) {
-                flex-wrap: wrap;
+            padding: 50px 0px;
+
+            @media (max-width: 900px) {
+                flex-direction: column;
+                padding: 30px 0px;
+                gap: 30px;
             }
         }
 
         .secction-5 .card-approval {
+            flex: 1;
+            min-width: 280px;
             text-align: center;
-            width: 90%;
-            
+            padding: 40px 0px;
+
+            @media (max-width: 900px) {
+                flex: none;
+                width: 100%;
+                max-width: none;
+                padding: 20px 0;
+            }
+
         }
 
         .card-approval h3 {
@@ -357,12 +372,26 @@
             }
         }
 
-        video{
-            padding-left: 20px;
-            width: 90%;
+        .video-container {
+            flex: 1;
+            min-width: 300px;
+
+            @media (max-width: 900px) {
+                flex: none;
+                width: 95%;
+                max-width: none;
+            }
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .card-approval button {
+            width: 60%;
+            max-width: 454px;
             @media (max-width: 900px) {
                 font-size: 16px;
                 margin: 10px 0;
@@ -519,11 +548,12 @@
 
         </section>
         <section class="secction-5">
-
-            <video controls>
-                <source src="https://www.youtube.com/watch?v=hAGw6bRPvMA" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
+            <div class="video-container">
+                <video controls>
+                    <source src="https://d3jx1664xx9tr2.cloudfront.net/assets/Mayo25/landing+invex/video_landing_invex.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
 
             <div class="card-approval">
                 <h3>Aprobamos tu Tarjeta hoy mismo</h3>
