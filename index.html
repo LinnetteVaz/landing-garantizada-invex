@@ -31,7 +31,8 @@
             max-width: 1400px;
             width: 100%;
             margin: 0 auto;
-             @media (max-width: 900px) {
+
+            @media (max-width: 900px) {
                 width: 96%;
             }
         }
@@ -329,21 +330,35 @@
         }
 
         .secction-5 {
+            width: 98%;
+            margin: 0 auto;
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             gap: 20px;
             align-items: center;
             justify-content: center;
-            padding: 50px 20px;
-             @media (max-width: 900px) {
-                flex-wrap: wrap;
+            padding: 50px 0px;
+
+            @media (max-width: 900px) {
+                flex-direction: column;
+                padding: 30px 0px;
+                gap: 30px;
             }
         }
 
         .secction-5 .card-approval {
+            flex: 1;
+            min-width: 280px;
             text-align: center;
-            width: 90%;
-            
+            padding: 40px 0px;
+
+            @media (max-width: 900px) {
+                flex: none;
+                width: 100%;
+                max-width: none;
+                padding: 20px 0;
+            }
+
         }
 
         .card-approval h3 {
@@ -357,12 +372,26 @@
             }
         }
 
-        video{
-            padding-left: 20px;
-            width: 90%;
+        .video-container {
+            flex: 1;
+            min-width: 300px;
+
+            @media (max-width: 900px) {
+                flex: none;
+                width: 95%;
+                max-width: none;
+            }
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .card-approval button {
+            width: 60%;
+            max-width: 454px;
             @media (max-width: 900px) {
                 font-size: 16px;
                 margin: 10px 0;
@@ -519,11 +548,12 @@
 
         </section>
         <section class="secction-5">
-
-            <video controls>
-                <source src="https://www.youtube.com/watch?v=hAGw6bRPvMA" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
+            <div class="video-container">
+                <video controls>
+                    <source src="https://invex-assets-provider.s3.us-east-2.amazonaws.com/assets/Mayo25/landing%20invex/video_landing_invex.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZOZQGAJMEKWNTVNG%2F20250612%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20250612T174149Z&X-Amz-Expires=300&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBoaCXVzLWVhc3QtMiJIMEYCIQCZJr5JtweIQwgYDe%2BOalmAAvVbuzZnOkeV5iIJj4%2Fe7QIhALZOT%2BWOd2s6cEG6pwxpBs0%2FuAMjBFYep3NoYVrjortPKvoCCPP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjUwMjUxNzMxNTQ0IgxorVT7BsqW5AiZxBIqzgIC43XAPtBsLrW%2Bn4iU25MxWqHBrOhQUhKQADbXwHfysGINXHtJ4BRRXPLZvUzqAzn8W5aNG3B%2FLYo1piiWHs4dk8iYax0JSb3LvUvFDCJSwgDJ06x6tPORd9irZtAc3Czi2QbS3aK3S5evDB%2BPoVFsf7J9VFoVNS48Ct0Vx%2BkrcWC1Eo5FKoyoMPxj2eWtc4dyzBMe5VpUAFLW%2BZ8qTe%2FbD6C%2FO12%2BAfl31DbBc5x2xPuDRQuL%2B%2B%2FscI5rpr1fGLbbbOrBS0BYfb8GZSEO40bjtO7hCjKpIxLJMjl78nfCXqDdUqkybwZ6HUVnTV84BDf8u%2FQaepg6iUFbWBmttEToc0msni89xuXLCG2mFGadOqw2dpRZUSVOHkUECg7HB4yi0TwKSKVKwJh%2B2yuhF3XIe6ZNdv%2BIizxRFiHfBKVhJiGU4m%2BUpXIrQ2XiigwFMP%2BYrMIGOqwC1IBdkqODXojgO%2BI%2FFGScYp9GtOcjb8zB9KFsyLsCQhhyZYLB3HBGCdXOVSa1OZTIFeY3g%2FQ1v5OZox87Y6Fq3P6gKPo0tL4SvG4c5Ux1EQgccCOHtveA9KK1ufq9W6W3H%2B1yjMe37nNehQWkSukjHwMJjU4n7wfl48ayRMOL8klzorbyRwHmzm%2Fbqa9K0yKTEGSxwtd10rS2BS859gVl%2Fl0xz0FBZ2esQ20CcGyp1r7o7HNItkbj7lIFl9Z6cmPsFNppowr9Rk2M4ntQyr4d15X9ngk0QGdpJxg9dZyrqMi%2FeN30Ae0DObItkLo1pKdonw9e%2FWBc6Hhngbcefwwfv5FV9AlWhEXbBE84Z7fny1isVFQHyXc4C2irHZjCsL0ylJXG1m42R3e41rtV&X-Amz-Signature=f1267c952df552f7ac7dcea801f0f30669c7a697708255ad161b54a8a616a813&X-Amz-SignedHeaders=host&response-content-disposition=inline" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
 
             <div class="card-approval">
                 <h3>Aprobamos tu Tarjeta hoy mismo</h3>
