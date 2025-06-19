@@ -5,14 +5,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>landing invex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             background-color: #f5f5f5;
             font-family: 'Inter', sans-serif;
-            background-image: url('https://d3jx1664xx9tr2.cloudfront.net/assets/Mayo25/landing+invex/Backgroundl.jpg');
-            background-position: initial;
-             background-size: cover;
+            position: relative;
+        }
+
+        .circle-2{
+            position: absolute;
+            top: 48%;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: -1;
+            @media screen and (min-width: 767px) {
+                top: 41%;
+                left: 40%;
+                width: 60%;
+            }
+            @media screen and (min-width: 1025px) {
+                top: 48%;
+                left: 55%;
+                width: 45%;
+            }
+            @media screen and (min-width: 2000px) {
+                top: 48%;
+                left: 52%;
+                width: 27%;
+            }
+        }
+        .circle-2 img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
 
         .secction-1-banner {
@@ -27,6 +57,30 @@
 
         .section-2 {
             width: 100;
+            position: relative;
+        }
+
+        .circle-section-2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            @media screen and (min-width: 767px) {
+                top: 3%;
+                width: 40%;
+            }
+            @media screen and (min-width: 2000px) {
+                top: 3%;
+                left: 21%;
+                width: 37%;
+            }
+        }
+        .circle-section-2 img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
 
         .section-2 .description {
@@ -42,7 +96,7 @@
 
         .description .subtitle {
             margin: 60px auto;
-            width: 70%;
+            width: 65%;
 
             @media (max-width: 900px) {
                 margin: 3% auto;
@@ -64,6 +118,11 @@
             width: 100%;
         }
 
+        .credit-card .subtitleTarget{
+            width: 85%;
+            margin: 0 auto;
+        }
+
 
         .credit-card h3 {
             font-weight: 700;
@@ -74,13 +133,15 @@
             }
         }
 
-        span {
+        .credit-card h3 span {
             color: #B20030;
         }
 
         .credit-card .paragraph {
             font-size: 25px;
             font-weight: 300;
+            width: 82%;
+            margin: 0 auto;
 
             @media (max-width: 900px) {
                 font-size: 18px
@@ -136,6 +197,18 @@
             }
         }
 
+        .containerImg{
+            width: 320px;
+            margin: 0 auto;
+
+            @media screen and (min-width: 767px) {
+                width: 700px;
+            }
+            @media screen and (min-width: 1020px) {
+                width: 1000px;
+            }
+        }
+
         .container-images img {
             object-fit: cover;
             width: 100%;
@@ -151,6 +224,7 @@
             margin: 70px auto;
             max-width: 1400px;
             width: 100%;
+            position: relative;
 
             @media (max-width: 900px) {
                 margin: 50px auto;
@@ -159,9 +233,37 @@
             }
         }
 
+        .geca-garantía{
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            @media (min-width: 766px) {
+                bottom: -65px;
+            }
+              @media (min-width: 1023px) {
+                bottom: -110px;
+            }
+        }
+        .geca-garantía img {
+            width: 99vw;
+            height: 150px;
+            @media (min-width: 766px) {
+                width: 100vw;
+                height: 390px;
+            }
+            @media (min-width: 1023px) {
+                width: 100vw;
+                height: 390px;
+            }
+            @media (min-width: 2000px) {
+                height: 380px;
+            }
+        }
+
         .garantía h3 {
             font-weight: 700;
-            font-size: 33px;
+            font-size: 40px;
             color: #B20030;
 
             @media (max-width: 900px) {
@@ -170,7 +272,7 @@
             }
         }
 
-        .garantía .paragraph {
+        .garantía .paragragh {
             font-weight: 300;
             font-size: 30px;
 
@@ -342,11 +444,56 @@
             align-items: center;
             justify-content: center;
             padding: 50px 0px;
+            position: relative;
 
             @media (max-width: 900px) {
                 flex-direction: column;
                 padding: 30px 0px;
                 gap: 30px;
+            }
+        }
+        .secction-5 .circle-section-5 {
+            position: absolute;
+            top: -150px;
+            left: -65px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+            @media (min-width: 766px) {
+                top: -16%;
+                left: -7px;
+                width: 54%;
+            }
+            @media (min-width: 1023px) {
+                top: -51%;
+                left: 2%;
+                width: 39%;
+            }
+        }
+        .secction-5 .circle-section-5 img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .secction-5 .geca-section-5 {
+            position: absolute;
+            top:0;
+            z-index: -2;
+        }
+        .secction-5 .geca-section-5 img {
+            width: 100vw;
+            height: 150px;
+            @media (min-width: 766px) {
+                width: 100vw;
+                height: 390px;
+            }
+            @media (min-width: 1023px) {
+                width: 100vw;
+                height: 390px;
+            }
+            @media (min-width: 2000px) {
+                height: 380px;
             }
         }
 
@@ -379,6 +526,7 @@
         .video-container {
             flex: 1;
             min-width: 300px;
+            z-index: 2;
 
             @media (max-width: 900px) {
                 flex: none;
@@ -405,10 +553,16 @@
 </head>
 
 <body>
+    <div class="circle-2">
+        <img src="./public/Circle2.png" alt="Circle2" />
+    </div>
     <section class="secction-1-banner">
         <img src="https://d3jx1664xx9tr2.cloudfront.net/assets/Mayo25/landing invex/Banner.jpg" alt="banner" />
     </section>
     <main class="section-2">
+          <div class="circle-section-2">
+                <img src="./public/Circle1.png" alt="Circle1" />
+            </div>
         <section class="description">
             <div class="subtitle">
                 <h2>
@@ -417,17 +571,20 @@
                 </h2>
             </div>
             <div class="credit-card">
-                <h3>
-                    ¿Quieres saber cuál es la diferencia entre una
-                    <span>Tarjeta de Crédito con Garantía</span> y una
-                    <span>Tarjeta de Crédito Tradicional</span> ?
-                </h3>
+                <div class="subtitleTarget">    
+                    <h3>
+                        ¿Quieres saber cuál es la diferencia entre una
+                        <span>Tarjeta de Crédito con Garantía</span>
+                        y una <span>Tarjeta de Crédito Tradicional</span>?
+                    </h3>
+                </div>
                 <p class="paragraph">La Tarjeta de Crédito INVEX con garantía, funciona como
                     una Tarjeta
                     de Crédito Tradicional, es aceptada en cualquier establecimiento,
                     podrás hacer compras en línea y además conserva los mismos
                     beneficios.
                 </p>
+                <br>
                 <p class="paragraph">
                     La única diferencia es que para poder adquirirla tendrás que
                     respaldarla con un depósito que corresponde a un porcentaje de la
@@ -443,16 +600,26 @@
         <section class="product">
             <h3> ¿Para quién es este producto?</h3>
             <div class="container-images">
-                <img src="https://d3jx1664xx9tr2.cloudfront.net/assets/Mayo25/landing invex/Chica 1.png" alt="" />
-                <img src="https://d3jx1664xx9tr2.cloudfront.net/assets/Mayo25/landing invex/Chica 2.png" alt="" />
+                <div class="containerImg">
+                    <img src="https://d3jx1664xx9tr2.cloudfront.net/assets/Mayo25/landing invex/Chica 1.png" alt="" />
+                </div>
+                <div class="containerImg">
+                    <img src="https://d3jx1664xx9tr2.cloudfront.net/assets/Mayo25/landing invex/Chica002.png" alt="" />
+                </div>
             </div>
         </section>
     </main>
     <main class="section-3">
         <section class="garantía">
+            <div class="geca-garantía">
+                <img src="./public/Greca1.png" alt="garantía" />
+            </div>
             <h3> ¿Y qué pasa con tu Garantía? </h3>
+            <br>
             <p class="paragragh">Tu Garantía siempre estará segura y podrás verla en todo
                 momento dentro de tu app INVEX Control.</p>
+
+            <br>
             <p class="paragragh">Usa tu <span style=" font-weight: 700; color: #B20030;">Tarjeta de Crédito</span> de
                 manera responsable, realiza
                 compras y paga el saldo a tiempo de manera
@@ -554,6 +721,12 @@
 
         </section>
         <section class="secction-5">
+            <div class="circle-section-5">
+                <img src="./public/Circle3.png" alt="Circle3" />
+            </div>
+            <div class="geca-section-5">
+                <img src="./public/Greca2.png" alt="section5" />
+            </div>
             <div class="video-container">
                 <video controls>
                     <source src="https://d3jx1664xx9tr2.cloudfront.net/assets/Mayo25/landing+invex/video_landing_invex.mp4" type="video/mp4">
