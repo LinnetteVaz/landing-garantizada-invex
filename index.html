@@ -73,14 +73,26 @@
             }
             @media screen and (min-width: 2000px) {
                 top: 3%;
-                left: 21%;
+                left: 12%;
                 width: 37%;
             }
         }
-        .circle-section-2 img {
+        .circle-full {
+            display: none;
+            @media screen and (min-width: 2000px) {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                display: flex; 
+            }     
+        }
+        .circle{
             width: 100%;
             height: auto;
             object-fit: cover;
+            @media screen and (min-width: 2000px) {
+                display: none;
+            }
         }
 
         .section-2 .description {
@@ -554,14 +566,16 @@
 
 <body>
     <div class="circle-2">
-        <img src="./public/Circle2.png" alt="Circle2" />
+        <img class="circle" src="./public/Circle2.png" alt="Circle2" />
+        <img class="circleFull" src="./public/Circle2_Full.png" alt="Circle2" />
     </div>
     <section class="secction-1-banner">
         <img src="https://d3jx1664xx9tr2.cloudfront.net/assets/Mayo25/landing invex/Banner.jpg" alt="banner" />
     </section>
     <main class="section-2">
           <div class="circle-section-2">
-                <img src="./public/Circle1.png" alt="Circle1" />
+                <img class="circle" src="./public/Circle1.png" alt="Circle1" />
+                <img class="circle-full" src="./public/Circle1_Full.png" alt="Circle2" />
             </div>
         <section class="description">
             <div class="subtitle">
@@ -722,7 +736,7 @@
         </section>
         <section class="secction-5">
             <div class="circle-section-5">
-                <img src="./public/Circle3.png" alt="Circle3" />
+                <img src="./public/Circle3.png" alt="Circle3" />e3" />
             </div>
             <div class="geca-section-5">
                 <img src="./public/Greca2.png" alt="section5" />
